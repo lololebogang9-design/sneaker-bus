@@ -1,0 +1,211 @@
+/* GENERAL */
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 20px 50px;
+    border-bottom: 3px solid red;
+    position: sticky;
+    top: 0;
+}
+
+/* LOGO + TITLE */
+header div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header img{
+    border-radius: 50%;
+    border: 3px solid red;
+}
+
+/* TITLE */
+header h1{
+    font-size: 45px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 10px red;
+}
+
+/* NAVIGATION */
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: red;
+}
+
+/* HERO SECTION */
+main{
+    text-align: center;
+}
+
+/* WELCOME SECTION */
+.hero{
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("images/Poster - Step Into Style.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* MAIN TITLE */
+.hero h2{
+    font-size: 70px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px red;
+    margin-bottom: 20px;
+}
+
+/* HERO TEXT */
+.hero p{
+    font-size: 22px;
+    max-width: 700px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+.hero a{
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 18px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px red;
+}
+
+.hero a:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* CONTENT SECTIONS */
+section{
+    width: 85%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* HEADINGS */
+section h2{
+    font-size: 40px;
+    color: red;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* CARDS */
+.card-container{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: #1a1a1a;
+    padding: 30px;
+    width: 300px;
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px rgba(255,0,0,0.3);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 25px red;
+}
+
+/* CARD TITLES */
+.card h3{
+    color: red;
+    margin-bottom: 15px;
+}
+
+/* LISTS */
+ul, ol{
+    text-align: left;
+    margin: auto;
+    max-width: 700px;
+    line-height: 2;
+    font-size: 18px;
+}
+
+/* REVIEWS */
+.review{
+    background-color: #1a1a1a;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-left: 5px solid red;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(255,0,0,0.2);
+}
+
+/* FOOTER */
+footer{
+    background-color: black;
+    text-align: center;
+    padding: 25px;
+    border-top: 3px solid red;
+}
+
+/* MOBILE */
+@media(max-width: 768px){
+
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav{
+        margin-top: 15px;
+    }
+
+    .hero h2{
+        font-size: 45px;
+    }
+
+    .hero p{
+        font-size: 18px;
+    }
+}
