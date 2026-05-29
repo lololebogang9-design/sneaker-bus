@@ -253,31 +253,24 @@ button:hover{
 
 /* HR */
 hr{
-    border: 1px solid red;
-
+    border: 1px solid rgb(250, 245, 245);
     width: 90%;
 
     margin: auto;
 }
 
 /* FOOTER */
-footer{
-    background-color: black;
-
-    padding: 30px;
-
-    text-align: center;
-
-    margin-top: 50px;
-
-    border-top: 3px solid red;
-}
+footer{ width: 100%; 
+    background-color: black; 
+    color: white; 
+    text-align: center; 
+    padding: 25px 0; 
+    margin-top: 40px;
+    border-top: 3px solid red; }
 
 /* FOOTER TEXT */
 footer p{
-    color: white;
-
-    font-size: 17px;
+    margin: 0;
 }
 
 /* SCROLLBAR */
