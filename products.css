@@ -7,9 +7,8 @@
 
 /* BODY */
 body{
-    background: #0d0d0d;
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
     font-family: Arial, Helvetica, sans-serif;
-
     color: white;
 }
 
@@ -18,17 +17,29 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 20px 50px;
-    background-color: black;
+
+    background-color: rgba(0,0,0,0.95);
+
     border-bottom: 3px solid red;
+
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* LOGO + TITLE */
+.logo-title{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 /* LOGO */
-header img{
+.logo-title img{
     border-radius: 50%;
+
     border: 4px solid red;
 
     box-shadow: 0px 0px 20px red;
@@ -36,159 +47,229 @@ header img{
     transition: 0.4s;
 }
 
-header img:hover{
-    transform: rotate(5deg) scale(1.05);
+/* LOGO HOVER */
+.logo-title img:hover{
+    transform: scale(1.08) rotate(5deg);
 }
 
 /* TITLE */
-header h1{
+.logo-title h1{
     font-size: 42px;
+
+    color: white;
+
     text-transform: uppercase;
+
     letter-spacing: 3px;
-    text-shadow: 0px 0px 15px red;
-    margin-left: 20px;
-    flex: 1;
+
+    text-shadow: 0px 0px 20px red;
 }
 
 /* NAVIGATION */
 nav a{
     color: white;
+
     text-decoration: none;
+
     margin-left: 25px;
+
     font-size: 18px;
+
     font-weight: bold;
+
+    position: relative;
+
     transition: 0.3s;
 }
 
+/* NAV HOVER */
 nav a:hover{
     color: red;
+
     text-shadow: 0px 0px 10px red;
 }
 
 /* SECTION TITLES */
 .section-title{
-    font-size: 45px;
     color: red;
-    margin-top: 70px;
-    margin-bottom: 40px;
-    margin-left: 50px;
+
+    font-size: 45px;
+
     text-transform: uppercase;
+
+    margin-top: 70px;
+
+    margin-bottom: 40px;
+
+    margin-left: 50px;
+
     border-left: 5px solid white;
+
     padding-left: 20px;
+
     text-shadow: 0px 0px 15px red;
 }
 
 /* PRODUCT CONTAINER */
 .product-container{
     width: 95%;
+
     margin: auto;
+
     display: flex;
+
     flex-wrap: wrap;
+
     justify-content: center;
+
     gap: 35px;
-    padding-bottom: 80px;
+
+    margin-bottom: 60px;
 }
 
 /* PRODUCT CARD */
 .product-card{
-    background: linear-gradient(to bottom, #1a1a1a, #111);
-    width: 350px;
+    background: linear-gradient(to bottom, #1f1f1f, #111);
+
+    width: 340px;
+
     border-radius: 25px;
+
     overflow: hidden;
-    text-align: center;
+
     padding: 25px;
+
+    text-align: center;
+
     box-shadow: 0px 0px 20px rgba(255,0,0,0.15);
+
     transition: 0.4s;
+
     position: relative;
 }
 
 /* CARD HOVER */
 .product-card:hover{
     transform: translateY(-15px) scale(1.02);
+
     box-shadow: 0px 0px 35px red;
 }
 
 /* PRODUCT IMAGES */
 .product-card img{
     width: 100%;
-    height: 250px;
+
+    height: 230px;
+
     object-fit: cover;
+
     border-radius: 20px;
+
     margin-bottom: 15px;
+
     transition: 0.4s;
 }
 
 /* IMAGE HOVER */
 .product-card:hover img{
-    transform: scale(1.04);
+    transform: scale(1.05);
 }
 
 /* PRODUCT NAME */
 .product-card h3{
-    font-size: 28px;
+    font-size: 30px;
+
     color: white;
+
     margin-bottom: 15px;
+
     text-shadow: 0px 0px 10px red;
 }
 
 /* PRICE */
 .price{
     color: red;
-    font-size: 30px;
+
+    font-size: 32px;
+
     font-weight: bold;
-    margin-bottom: 10px;
+
+    margin-bottom: 15px;
+
     text-shadow: 0px 0px 10px red;
 }
 
 /* DESCRIPTION */
 .product-card p{
     color: #ddd;
+
     font-size: 17px;
+
     line-height: 1.7;
-    margin-bottom: 12px;
+
+    margin-bottom: 10px;
 }
 
-/* RATING */
+/* STAR RATING */
 .rating{
     font-size: 22px;
+
     margin-bottom: 20px;
 }
 
-/* BUTTON */
+/* BUY BUTTON */
 button{
     background: linear-gradient(to right, red, darkred);
+
     color: white;
+
     border: none;
+
     padding: 15px 35px;
+
     border-radius: 40px;
+
     font-size: 17px;
+
     font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.4s;
+
     box-shadow: 0px 0px 15px rgba(255,0,0,0.5);
 }
 
 /* BUTTON HOVER */
 button:hover{
     background: white;
+
     color: black;
+
     transform: scale(1.08);
+
     box-shadow: 0px 0px 20px red;
 }
 
 /* HR */
 hr{
     border: 1px solid red;
+
     width: 90%;
+
     margin: auto;
 }
 
 /* FOOTER */
 footer{
     background-color: black;
-    text-align: center;
+
     padding: 30px;
+
+    text-align: center;
+
     margin-top: 50px;
+
     border-top: 3px solid red;
 }
 
@@ -223,14 +304,16 @@ footer p{
         text-align: center;
     }
 
-    header h1{
-        margin: 20px 0;
+    .logo-title{
+        flex-direction: column;
+    }
 
+    .logo-title h1{
         font-size: 30px;
     }
 
     nav{
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     nav a{
