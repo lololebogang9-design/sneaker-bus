@@ -45,6 +45,29 @@ header h1{
     letter-spacing: 3px;
     text-shadow: 0px 0px 10px red;
 }
+/* NAVIGATION */
+nav a{
+    color: white;
+
+    text-decoration: none;
+
+    margin-left: 25px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+/* NAV HOVER */
+nav a:hover{
+    color: red;
+
+    text-shadow: 0px 0px 10px red;
+}
 
 /* HERO SECTION */
 main{

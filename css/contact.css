@@ -87,7 +87,7 @@ nav a:hover{
     height: 45vh;
 
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url("images/Poster - Step Into Style.png");
+    url(../images/Poster\ -\ Step\ Into\ Style.png);
 
     background-size: cover;
     background-position: center;
