@@ -16,21 +16,37 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 50px;
-
+    align-items: center; 
     background-color: black;
-
+    padding: 20px 50px;
     border-bottom: 3px solid red;
+    position: sticky;
+    top: 0;
 }
 
 /* LOGO + TITLE */
-.logo-title{
+header div{
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
+header img{
+    border-radius: 50%;
+    border: 3px solid red;
+}
+
+/* TITLE */
+header h1{
+    font-size: 45px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 10px red;
+}
+
+/* LOGO + TITLE */
+
 
 /* LOGO */
 .logo-title img{
