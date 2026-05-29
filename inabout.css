@@ -1,0 +1,279 @@
+
+/* ABOUT PAGE STYLING */
+
+/* MAIN ABOUT SECTION */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: black;
+    padding: 20px 50px;
+    border-bottom: 3px solid red;
+    position: sticky;
+    top: 0;
+}
+header div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header img{
+    border-radius: 50%;
+    border: 3px solid red;
+}
+
+/* TITLE */
+header h1{
+    font-size: 45px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 10px red;
+}
+
+/* NAVIGATION */
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: red;
+}
+
+main{
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* MAIN HEADINGS */
+main h2{
+    color: red;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-top: 60px;
+    margin-bottom: 25px;
+    text-shadow: 0px 0px 10px red;
+    border-left: 5px solid white;
+    padding-left: 15px;
+}
+
+/* SMALL HEADINGS */
+main h3{
+    color: white;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* PARAGRAPHS */
+main p{
+    font-size: 18px;
+    line-height: 1.9;
+    color: #ddd;
+    margin-bottom: 20px;
+
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid red;
+
+    box-shadow: 0px 0px 10px rgba(255,0,0,0.2);
+}
+
+/* IMAGES */
+main img{
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(255,0,0,0.4);
+    transition: 0.4s;
+}
+
+/* IMAGE HOVER EFFECT */
+main img:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px red;
+}
+
+/* LISTS */
+main ul,
+main ol{
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 20px;
+
+    box-shadow: 0px 0px 15px rgba(255,0,0,0.2);
+
+    margin-bottom: 40px;
+}
+
+/* LIST ITEMS */
+main li{
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+}
+
+/* HOVER ON LIST ITEMS */
+main li:hover{
+    color: red;
+    transform: translateX(10px);
+}
+
+/* CUSTOMER REVIEW STYLE */
+main p strong{
+    color: gold;
+    font-size: 20px;
+}
+
+/* GLOW EFFECT SECTIONS */
+main h2:hover{
+    text-shadow: 0px 0px 20px red;
+    transition: 0.3s;
+}
+
+/* HR LINE */
+hr{
+    border: 1px solid red;
+    width: 90%;
+    margin: auto;
+}
+
+/* FOOTER */
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    border-top: 3px solid red;
+}
+/* ABOUT HERO */
+.about-hero{
+    height: 60vh;
+
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("images/Poster - Step Into Style.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+}
+
+.about-hero h2{
+    font-size: 60px;
+    color: white;
+    text-shadow: 0px 0px 20px red;
+    margin-bottom: 20px;
+}
+
+.about-hero p{
+    font-size: 22px;
+    max-width: 700px;
+}
+
+/* ABOUT SECTION */
+.about-section{
+    width: 90%;
+    margin: auto;
+    padding: 80px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* ABOUT TEXT */
+.about-text{
+    flex: 1;
+}
+
+.about-text h2{
+    color: red;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-text p{
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* ABOUT IMAGE */
+.about-image img{
+    width: 450px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(255,0,0,0.4);
+}
+
+/* MISSION CARDS */
+.mission-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    width: 90%;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+.mission-card{
+    background-color: #1a1a1a;
+    width: 350px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0px 0px 15px rgba(255,0,0,0.2);
+    transition: 0.3s;
+}
+
+.mission-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 25px red;
+}
+
+.mission-card h3{
+    color: red;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+/* FAQ */
+.faq-section{
+    width: 90%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.faq{
+    background-color: #1a1a1a;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 5px solid red;
+    border-radius: 15px;
+}
+
+.faq h3{
+    color: red;
+    margin-bottom: 10px;
+}
