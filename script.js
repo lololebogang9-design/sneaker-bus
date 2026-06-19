@@ -36,3 +36,48 @@ form.addEventListener("submit", function(event) {
     //if all is well 
     messageBox.textContent = "Your enquiry has been sent successfully!";    
 })
+const contactForm = document.getElementById("contactForm");
+const contactMessageBox = document.getElementById("contact-message-box");
+
+contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    if (name === "") {
+        contactMessageBox.textContent = "Please enter your name.";
+        return;
+    }
+
+    if (email === "") {
+        contactMessageBox.textContent = "Please enter your email.";
+        return;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+        contactMessageBox.textContent = "Please enter a valid email address.";
+        return;
+    }
+
+    if (phone === "") {
+        contactMessageBox.textContent = "Please enter your phone number.";
+        return;
+    }
+
+    if (phone.length < 10) {
+        contactMessageBox.textContent = "Please enter a valid phone number.";
+        return;
+    }
+
+    if (message === "") {
+        contactMessageBox.textContent = "Please enter your message.";
+        return;
+    }
+     window.location.href = 
+        "mailto:" + myEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+    contactMessageBox.textContent = "Your message has been sent successfully!";
+});
