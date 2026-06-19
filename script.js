@@ -1,14 +1,14 @@
-const form = document.getElementById('enquiry-form');
-const messageBox = document.getElementById('message-box');
+const form = document.getElementById("enquiryForm");
+const messageBox = document.getElementById("message-box");
 
 // define the code that will run as soon as user clicks submit button
 // click submit button
-form.addEventListener('submit', function(event) {
+form.addEventListener("submit", function(event) {
     event.preventDefault(); // prevent the page from refreshing
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
     if (name== "") {
         messageBox.textContent = "Please enter your name.";
@@ -18,7 +18,7 @@ form.addEventListener('submit', function(event) {
         messageBox.textContent = "Please enter your email.";
         return;
     }
-    if (email.includes("@") || email.includes(".")) {
+    if (!email.includes("@") || !email.includes(".")) {
         messageBox.textContent = "Please enter a valid email address.";
         return;
     }
