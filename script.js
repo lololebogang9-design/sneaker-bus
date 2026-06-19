@@ -61,15 +61,9 @@ contactForm.addEventListener("submit", function(event) {
         contactMessageBox.textContent = "Please enter a valid email address.";
         return;
     }
-
-    if (phone === "") {
-        contactMessageBox.textContent = "Please enter your phone number.";
-        return;
-    }
-
-    if (phone.length < 10) {
-        contactMessageBox.textContent = "Please enter a valid phone number.";
-        return;
+    if (!/^\d{10}$/.test(phone)) {
+    contactMessageBox.textContent = "Please enter a valid 10-digit phone number.";
+    return;
     }
 
     if (message === "") {

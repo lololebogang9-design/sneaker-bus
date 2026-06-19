@@ -32,6 +32,10 @@
     onkeyup="searchProducts()">
 
 </div>
+<p>❤️ Likes: <span id="likeCount">0</span></p>
+<p>🛒 Cart Items: <span id="cartCount">0</span></p>
+
+<p id="productMessage"></p>
 
 <h2 class="section-title">Casual Sneakers</h2>
 
@@ -49,7 +53,8 @@
 
         <p class="rating">⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
@@ -65,7 +70,8 @@
 
         <p class="rating">⭐⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
@@ -80,7 +86,8 @@
         <p>Various sizes available</p>
         <p class="rating">⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
@@ -92,7 +99,7 @@
 
         <img src="images/NIKE SHOX TL R2800.jpg" alt="Nike">
 
-        <img src="images/R2500.jpg" alt="Nike">
+
 
         <h3>NIKE</h3>
 
@@ -102,13 +109,44 @@
 
         <p class="rating">⭐⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
+
+    </div>
+     <div class="product-card">
+
+        <img src="images/R2500.jpg" alt="Nike">
+
+        <h3>NIKE</h3>
+
+        <p class="price">R2500</p>
+
+        <p>All sizes and multiple colours available</p>
+
+        <p class="rating">⭐⭐⭐⭐⭐</p>
+
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
     <div class="product-card">
 
         <img src="images/CAMPUS SELECTION OF COLOURS.jpg" alt="Adidas">
+
+        <h3>Adidas</h3>
+
+        <p class="price">R2000</p>
+
+        <p>All sizes and colours available</p>
+
+        <p class="rating">⭐⭐⭐⭐⭐</p>
+
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
+
+    </div>
+     <div class="product-card">
 
         <img src="images/CAMPUS.jpg" alt="Adidas">
         <h3>Adidas</h3>
@@ -119,13 +157,28 @@
 
         <p class="rating">⭐⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
     <div class="product-card">
 
         <img src="images/f74e0b5b8afcf51f62dbe2d0cff85b66.jpg" alt="Puma">
+
+        <h3>Puma</h3>
+
+        <p class="price">R1500</p>
+
+        <p>All sizes available</p>
+
+        <p class="rating">⭐⭐⭐⭐⭐</p>
+
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
+
+    </div>
+     <div class="product-card">
         <img src="images/PUMA.jpg" alt="Puma">
 
         <h3>Puma</h3>
@@ -136,7 +189,8 @@
 
         <p class="rating">⭐⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
@@ -159,7 +213,8 @@
 
         <p class="rating">⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
@@ -175,7 +230,8 @@
 
         <p class="rating">⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
@@ -191,7 +247,8 @@
 
         <p class="rating">⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
@@ -216,7 +273,8 @@
 
         <p class="rating">⭐⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
@@ -232,7 +290,8 @@
 
         <p class="rating">⭐⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
@@ -244,10 +303,24 @@
 
 <div class="product-container">
 
-    <div class="product-card">
+    <div class="product-card"> 
+        <img src="images/BATHU SNEAKER.webp" alt="Local Brands">
+
+        <h3>Local Brands</h3>
+
+        <p class="price">R1800</p>
+
+        <p>All sizes available</p>
+
+        <p class="rating">⭐⭐⭐⭐</p>
+
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
+
+    </div>
+      <div class="product-card">
 
         <img src="images/SA local brand.jpg" alt="Local Brands"> 
-        <img src="images/BATHU SNEAKER.webp" alt="Local Brands">
 
         <h3>Local Brands</h3>
 
@@ -257,14 +330,16 @@
 
         <p class="rating">⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
     <div class="product-card">
 
+
         <img src="images/traditional.webp" alt="Traditional Designs">
-        <img src="images/another traditional.webp" alt="Traditional Designs">
+
 
         <h3>Traditional Designs</h3>
 
@@ -274,7 +349,24 @@
 
         <p class="rating">⭐⭐⭐⭐</p>
 
-        <button>Buy Now</button>
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
+
+    </div>
+    <div class="product-card">
+
+        <img src="images/another traditional.webp" alt="Traditional Designs">
+
+        <h3>Traditional Designs</h3>
+
+        <p class="price">R1200</p>
+
+        <p>All sizes available</p>
+
+        <p class="rating">⭐⭐⭐⭐</p>
+
+        <button class="like-btn">❤️ Like</button>
+        <button class="cart-btn">🛒 Add to Cart</button>
 
     </div>
 
