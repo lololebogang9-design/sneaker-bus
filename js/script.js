@@ -103,35 +103,63 @@ if (contactForm) {
 
 const likeCount = document.getElementById("likeCount");
 const cartCount = document.getElementById("cartCount");
+const cartTotal = document.getElementById("cartTotal");
 const productMessage = document.getElementById("productMessage");
+const cartList = document.getElementById("cartList");
 
-if (likeCount && cartCount && productMessage) {
+if (likeCount && cartCount && cartTotal && productMessage) {
 
     let likes = 0;
     let cart = 0;
+    let total = 0;
 
     document.addEventListener("click", function(event) {
 
         if (event.target.classList.contains("like-btn")) {
             likes++;
             likeCount.textContent = likes;
+
             productMessage.textContent =
                 "❤️ Thank you for liking our products!";
         }
 
-        if (event.target.classList.contains("cart-btn")) {
-            cart++;
-            cartCount.textContent = cart;
-            productMessage.textContent =
-                "🛒 Item added to cart. Thank you for shopping with Sneaker Bus SA!";
-        }
+       if (event.target.classList.contains("cart-btn")) {
 
-    });
+    const productCard =
+        event.target.closest(".product-card");
+
+    const priceText =
+        productCard.querySelector(".price").textContent;
+
+    const price =
+        parseInt(priceText.replace("R", ""));
+
+    const productName =
+        productCard.querySelector("h3").textContent;
+
+    cart++;
+    total += price;
+
+    cartCount.textContent = cart;
+    cartTotal.textContent = total;
+
+    const listItem =
+        document.createElement("li");
+
+    listItem.textContent =
+        productName + " - R" + price;
+
+    cartList.appendChild(listItem);
+
+    productMessage.textContent =
+        "🛒 " + productName + " added to cart!";
 }
+        }
+    ) 
 
-// ======================
+    
 // SEARCH PRODUCTS
-// ======================
+
 
 function searchProducts() {
 
@@ -152,12 +180,6 @@ function searchProducts() {
         } else {
             card.style.display = "none";
         }
-
+    
     });
-}
-
-
-
-
-
-
+} } 
