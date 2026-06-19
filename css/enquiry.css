@@ -309,3 +309,37 @@ footer p{
         padding: 25px;
     }
 }
+/* TABLET */
+@media(max-width: 1024px){
+
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header div{
+        flex-direction: column;
+    }
+
+    header h1{
+        font-size: 35px;
+    }
+
+    nav{
+        margin-top: 20px;
+    }
+
+    nav a{
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .section-title{
+        font-size: 35px;
+        margin-left: 20px;
+    }
+
+    .product-card{
+        width: 45%;
+    }
+}

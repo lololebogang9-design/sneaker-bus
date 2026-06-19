@@ -1,8 +1,11 @@
+console.log("Script loaded ");
 const form = document.getElementById("enquiryForm");
+console.log(form);
 const messageBox = document.getElementById("message-box");
 
 // define the code that will run as soon as user clicks submit button
 // click submit button
+ if (form) {
 form.addEventListener("submit", function(event) {
     event.preventDefault(); // prevent the page from refreshing
 
@@ -34,11 +37,13 @@ form.addEventListener("submit", function(event) {
         "mailto:" + myEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
 
     //if all is well 
-    messageBox.textContent = "Your enquiry has been sent successfully!";    
-})
+    messageBox.textContent = "Your enquiry has been sent successfully!"; 
+       })
+}
 const contactForm = document.getElementById("contactForm");
 const contactMessageBox = document.getElementById("contact-message-box");
 
+if (contactForm) {
 contactForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -78,6 +83,26 @@ contactForm.addEventListener("submit", function(event) {
         "mailto:" + myEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
 
     contactMessageBox.textContent = "Your message has been sent successfully!";
+});
+}
+const likeCount = document.getElementById("likeCount");
+const cartCount = document.getElementById("cartCount");
+const productMessage = document.getElementById("productMessage");
+
+console.log("Product section running");
+console.log(likeCount);
+console.log(cartCount);
+console.log(productMessage);
+document.addEventListener("click", function(event) {
+    console.log("Clicked:", event.target);
+
+    if (event.target.classList.contains("like-btn")) {
+        console.log("LIKE CLICKED");
+    }
+
+    if (event.target.classList.contains("cart-btn")) {
+        console.log("CART CLICKED");
+    }
 });
 
 const likeCount = document.getElementById("likeCount");
