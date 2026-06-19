@@ -75,3 +75,34 @@ contactForm.addEventListener("submit", function(event) {
 
     contactMessageBox.textContent = "Your message has been sent successfully!";
 });
+let likes = 0;
+let cart = 0;
+
+const likeButtons = document.querySelectorAll(".like-btn");
+const cartButtons = document.querySelectorAll(".cart-btn");
+
+const likeCount = document.getElementById("likeCount");
+const cartCount = document.getElementById("cartCount");
+const productMessage = document.getElementById("productMessage");
+
+// Like buttons
+likeButtons.forEach(button => {
+    button.addEventListener("click", function() {
+        likes++;
+        likeCount.textContent = likes;
+
+        productMessage.textContent =
+            "❤️ Thank you for liking our products!";
+    });
+});
+
+// Cart buttons
+cartButtons.forEach(button => {
+    button.addEventListener("click", function() {
+        cart++;
+        cartCount.textContent = cart;
+
+        productMessage.textContent =
+            "🛒 Item added to cart. Thank you for shopping with Sneaker Nation!";
+    });
+});

@@ -1,4 +1,6 @@
 /* RESET */
+
+/* RESET */
 *{
     margin: 0;
     padding: 0;
@@ -30,14 +32,14 @@ header{
 }
 
 /* LOGO + TITLE */
-.logo-title{
+header div{
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
 /* LOGO */
-.logo-title img{
+header img{
     border-radius: 50%;
 
     border: 4px solid red;
@@ -48,12 +50,12 @@ header{
 }
 
 /* LOGO HOVER */
-.logo-title img:hover{
+header img:hover{
     transform: scale(1.08) rotate(5deg);
 }
 
 /* TITLE */
-.logo-title h1{
+header h1{
     font-size: 42px;
 
     color: white;
@@ -230,6 +232,19 @@ nav a:hover{
 
     margin-bottom: 10px;
 }
+#productMessage{
+    color: green;
+    font-weight: bold;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.like-btn,
+.cart-btn{
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
 
 /* STAR RATING */
 .rating{
@@ -318,11 +333,11 @@ footer p{
         text-align: center;
     }
 
-    .logo-title{
+    header div{
         flex-direction: column;
     }
 
-    .logo-title h1{
+    header h1{
         font-size: 30px;
     }
 
@@ -347,75 +362,36 @@ footer p{
     }
 }
 /* TABLET */
-@media screen and (max-width: 1024px){
+@media(max-width: 1024px){
 
     header{
         flex-direction: column;
         text-align: center;
     }
 
+    header div{
+        flex-direction: column;
+    }
+
+    header h1{
+        font-size: 35px;
+    }
+
     nav{
         margin-top: 20px;
     }
 
-    .product-container{
-        justify-content: center;
+    nav a{
+        display: inline-block;
+        margin: 10px;
     }
 
-    .product-card{
-        width: 300px;
-    }
-
-    h1{
+    .section-title{
         font-size: 35px;
-    }
-
-    h2{
-        font-size: 30px;
-    }
-}
-
-/* MOBILE */
-@media screen and (max-width: 768px){
-
-    header{
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    nav{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .logo-title{
-        flex-direction: column;
-    }
-
-    .product-container{
-        flex-direction: column;
-        align-items: center;
+        margin-left: 20px;
     }
 
     .product-card{
-        width: 95%;
-    }
-
-    img{
-        max-width: 100%;
-        height: auto;
-    }
-
-    h1{
-        font-size: 28px;
-    }
-
-    h2{
-        font-size: 24px;
-    }
-
-    p{
-        font-size: 16px;
+        width: 45%;
     }
 }
