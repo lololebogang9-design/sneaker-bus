@@ -70,39 +70,47 @@ contactForm.addEventListener("submit", function(event) {
         contactMessageBox.textContent = "Please enter your message.";
         return;
     }
+    const myEmail = "sneakerbussa@gmail.com";
+    const subject = "New Contact Message from " + name;
+    const body = "Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nMessage: " + message;
+
      window.location.href = 
         "mailto:" + myEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
 
     contactMessageBox.textContent = "Your message has been sent successfully!";
 });
-let likes = 0;
-let cart = 0;
-
-const likeButtons = document.querySelectorAll(".like-btn");
-const cartButtons = document.querySelectorAll(".cart-btn");
 
 const likeCount = document.getElementById("likeCount");
 const cartCount = document.getElementById("cartCount");
 const productMessage = document.getElementById("productMessage");
 
-// Like buttons
-likeButtons.forEach(button => {
-    button.addEventListener("click", function() {
-        likes++;
-        likeCount.textContent = likes;
+if (likeCount && cartCount && productMessage) {
+    let likes = 0;
+    let cart = 0;
 
-        productMessage.textContent =
-            "❤️ Thank you for liking our products!";
+    document.addEventListener("click", function(event) {
+
+        if (event.target.classList.contains("like-btn")) {
+            likes++;
+            likeCount.textContent = likes;
+            productMessage.textContent = "❤️ Thank you for liking our products!";
+        }
+
+        if (event.target.classList.contains("cart-btn")) {
+            cart++;
+            cartCount.textContent = cart;
+            productMessage.textContent = "🛒 Item added to cart. Thank you for shopping with Sneaker Bus SA!";
+        }
+
     });
-});
+}
 
-// Cart buttons
-cartButtons.forEach(button => {
-    button.addEventListener("click", function() {
-        cart++;
-        cartCount.textContent = cart;
+function searchProducts() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll(".product-card");
 
-        productMessage.textContent =
-            "🛒 Item added to cart. Thank you for shopping with Sneaker Nation!";
+    cards.forEach(card => {
+        const name = card.querySelector("h3").textContent.toLowerCase();
+        card.style.display = name.includes(input) ? "block" : "none";
     });
-});
+}
